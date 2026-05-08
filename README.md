@@ -1,6 +1,6 @@
 # SportsDash — React Sports Category Explorer
 
-> A dark-themed, filterable sports dashboard built with React — demonstrating component architecture, local state management, and real-time UI feedback with toast notifications.
+> A dark-themed, filterable sports dashboard built with React, demonstrating component architecture, local state management, and real-time UI feedback with toast notifications.
 
 ---
 
@@ -21,9 +21,9 @@
 
 ## Overview
 
-SportsDash is a React application that lets users explore **30 sports** across **5 categories** — Team, Individual, Combat, Water, and Motor. Each sport is presented as a styled card with a cover image, description, and a toggleable like button backed by instant toast feedback.
+SportsDash is a React application that lets users explore **30 sports** across **5 categories** , Team, Individual, Combat, Water, and Motor. Each sport is presented as a styled card with a cover image, description, and a toggleable like button backed by instant toast feedback.
 
-The goal was to demonstrate the core pillars of React development in a focused, readable project: **state-driven UI**, **dynamic filtering**, **component reusability**, and **clean prop contracts** — all without over-engineering.
+The goal was to demonstrate the core pillars of React development in a focused, readable project: **state-driven UI**, **dynamic filtering**, **component reusability**, and **clean prop contracts** , all without over-engineering.
 
 ---
 
@@ -46,16 +46,17 @@ The goal was to demonstrate the core pillars of React development in a focused, 
 ```
 src/
 ├── components/
-│   ├── Card.js        # Individual sport card — image, desc, like toggle
+│   ├── Card.js        # Individual sport card : image, desc, like toggle
 │   ├── Grid.js        # Renders filtered card grid, owns liked[] state
 │   ├── Navbar.js      # Top bar with dashboard title
 │   └── Titles.js      # Category filter buttons with active highlight
-├── data.js            # Static data — CATEGORIES + 30 sport entries
+├── public
+├── data.js            # Static data : CATEGORIES + 30 sport entries
 ├── App.js             # Root — filter state + layout composition
-└── index.js           # Entry point — React root + ToastContainer mount
+└── index.js           # Entry point : React root + ToastContainer mount
 ```
 
-**Architecture pattern:** Single-directional data flow — `App` owns the active category, passes it to `Titles` (for active styling) and `Grid` (for filtering). `Grid` owns `liked[]` and threads it down to each `Card` as a prop.
+**Architecture pattern:** Single-directional data flow , `App` owns the active category, passes it to `Titles` (for active styling) and `Grid` (for filtering). `Grid` owns `liked[]` and threads it down to each `Card` as a prop.
 
 ---
 
@@ -71,7 +72,7 @@ src/
 
 **Description Truncation**
 
-Cards cap descriptions at 100 characters with an ellipsis: `props.desc.length > 100 ? props.desc.substring(0, 100) + "..." : props.desc` — keeps the grid visually uniform regardless of data variance.
+Cards cap descriptions at 100 characters with an ellipsis: `props.desc.length > 100 ? props.desc.substring(0, 100) + "..." : props.desc` , keeps the grid visually uniform regardless of data variance.
 
 **Active Filter Highlight**
 
@@ -97,7 +98,7 @@ Cards cap descriptions at 100 characters with an ellipsis: `props.desc.length > 
 | View | Description |
 |---|---|
 | **Default / All Sports** | Full 30-card grid in a responsive wrap layout on a dark background |
-| **Filtered View** | Any of 5 category filters — Team, Individual, Combat, Water, Motor — narrows the grid instantly |
+| **Filtered View** | Any of 5 category filters, Team, Individual, Combat, Water, Motor, narrows the grid instantly |
 | **Like Toggle** | Heart icon switches between filled and outlined; toast fires on every interaction |
 | **Active Filter** | Selected category button gets a white border highlight for clear visual feedback |
 
@@ -123,7 +124,7 @@ npm install
 npm start
 ```
 
-Opens at [http://localhost:3000](http://localhost:3000). No API key or backend required — all data is local.
+Opens at [http://localhost:3000](http://localhost:3000). No API key or backend required , all data is local.
 
 **Step 4: Build for production (optional)**
 ```bash
@@ -134,7 +135,7 @@ npm run build
 
 ## Result and Conclusion
 
-SportsDash is a focused demonstration of React fundamentals done correctly — clean component decomposition, unidirectional data flow, minimal and well-placed state, and a UI that responds instantly to every user action.
+SportsDash is a focused demonstration of React fundamentals done correctly , clean component decomposition, unidirectional data flow, minimal and well-placed state, and a UI that responds instantly to every user action.
 
 **Key achievements:**
 - ✅ Stateful category filtering with dynamic active-button highlight
