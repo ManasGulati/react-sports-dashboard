@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar.js';
+import Titles from './components/Titles.js';
+import Grid from './components/Grid.js';
+import { CATEGORIES } from './data.js';
+import { useState } from 'react';
 
 function App() {
+
+  const [title,change]=useState(CATEGORIES[0].label);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex-col flex bg-bgDark2">
+      <Navbar></Navbar>
+      <div className="bg-bgDark2">
+        <Titles title={title} change={change}></Titles>
+        <Grid title={title}></Grid>
+      </div>
     </div>
   );
 }
